@@ -30,7 +30,7 @@ Gitlog.prototype._write = function(chunk, encoding, callback) {
       } else if (pair[0].toLowerCase() === 'date') {
         this._current.date = new Date(pair[1].trim());
       } else {
-        this._current.message = '\n' + chunk;
+        this._current.message += '\n' + chunk;
         //this._current[pair[0]] = pair[1];
       }
     } else {
